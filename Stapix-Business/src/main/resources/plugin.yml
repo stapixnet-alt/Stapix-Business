@@ -1,0 +1,47 @@
+name: StapixBusiness
+version: 1.0
+main: ua.lviv.stapixbusiness.StapixBusiness
+api-version: 1.20
+description: Система бізнесів для сервера Львів
+author: LvivRP
+depend: [Vault, Citizens, DecentHolograms]
+
+commands:
+  bs:
+    description: Управління вашим бізнесом
+    usage: /bs [id]
+  businessadmin:
+    description: Адмін панель бізнесів
+    usage: /businessadmin [create|setholo|list]
+  buybusiness:
+    description: Купити бізнес
+    usage: /buybusiness <id>
+  sellbusiness:
+    description: Продати бізнес
+    usage: /sellbusiness
+  claimbusiness:
+    description: Захопити дах бізнесу (для банд)
+    usage: /claimbusiness <id>
+  yes:
+    description: Підтвердити дію
+    usage: /yes
+  no:
+    description: Скасувати дію
+    usage: /no
+
+permissions:
+  business.limit.entrepreneur:
+    description: Може мати до 2 бізнесів
+    default: false
+  business.limit.oligarch:
+    description: Може мати до 3 бізнесів
+    default: false
+  business.gang.claim:
+    description: Може захоплювати дах бізнесів
+    default: false
+  gang.leader.koty:
+    description: Лідер банди Коти
+    default: false
+  gang.leader.mukhy:
+    description: Лідер банди Мухи
+    default: false
